@@ -1,0 +1,213 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    /*========== Colors ==========*/
+    --light: #FCEEE5;
+    --dark: #0E1A47;
+    --green: #216961;
+    --orange: #DA5B14;
+    --yellow: #F9A72C;
+    --latte: #F0DFD4;
+    --cappucino: #82766E;
+  
+    /*========== Font and typography ==========*/
+    --body-font: 'Fredoka', sans-serif;
+    --big-font-size: 3rem; /*48px*/
+    --heading-font-size: 2.25rem; /*36px*/
+    --text-font-size: 1.5rem; /*24px*/
+  
+    /*========== Font weight ==========*/
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--light);
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    background-color: var(--green);
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 30px 100px;
+    z-index: 1;
+}
+
+.logo {
+    position: relative;
+    font-weight: var(--font-bold);
+    color: var(--light);
+    text-decoration: none;
+    font-size: var(--big-font-size);
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    color: var(--yellow);
+}
+
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: var(--light);
+    cursor: pointer;
+    display: none;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+  
+header ul li {
+    position: relative;
+    list-style: none;
+}
+  
+header ul li a {
+    position: relative;
+    margin: 0 40px;
+    color: var(--light);
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: var(--font-regular);
+    transition: 0.3s;
+}
+
+header ul li a:hover {
+    color: var(--yellow);
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 1.3rem 5%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .icons {
+        display: inline-flex;
+        transition: 0.6s;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .nav__list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: var(--yellow);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+        transition: 0.3s ease;
+        display: block;
+        overflow: hidden;
+        text-align: center;
+        font-size: var(--text-font-size);
+    }
+
+    #check:checked~.nav__list {
+        height: 14rem;
+    }
+
+    .nav__list ul {
+        display: block;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: 0.3s ease;
+    }
+
+    .nav__list ul li {
+        text-align: center;
+        color: var(--dark);
+    }
+
+    header ul li {
+        margin: 1.5rem 0;
+    }
+
+    header ul li a {
+        color: var(--dark);
+        text-align: center;
+    }
+
+    #check:checked~.nav__list ul {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(0.15s * var(--i));
+    }
+}
+
+/*=============== FOOTER ===============*/
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-container > div {
+    background-color: var(--green);
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    line-height: 30px;
+    padding-top: 60px;
+}
+
+.flex-container div h3 {
+    font-size: var(--text-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--light);
+    letter-spacing: 2px;
+}
+
+.flex-container div a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: var(--font-regular);
+    color: var(--light);
+    letter-spacing: 2px;
+}
+
+.flex-container div a:hover {
+    padding-left: 10px;
+}

@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doggle</title>
-    <link rel="icon" href="images/logo.png" type="image/x-icon"> <!-- adds favicon -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="images/logo.png" type="image/x-icon"> <!-- adds favicon -->
 </head>
 <body>
-    <header>
+    
+    <header class="header">
         <a href="#" class="logo">Doggle</a>
 
         <input type="checkbox" id="check">
@@ -17,16 +18,18 @@
             <i class='bx bx-menu' id="menu-icon"></i>
             <i class='bx bx-x' id="close-icon"></i>
         </label>
-
-        <ul class="nav__list">
-            <li><a href="#" style="--i:0;">Home</a></li>
-            <li><a href="#" style="--i:1;">About</a></li>
-            <li><a href="#" style="--i:2;">Features</a></li>
-            <li><a href="#"style="--i:3;">Contact</a></li>
-            <li><a href="#" class="nav__button">Sign Up</a></li>
-        </ul>
+        
+        <nav class="navbar">
+            <a href="#" style="--i:0;">Home</a>
+            <a href="#" style="--i:1;">About</a>
+            <a href="#" style="--i:2;">Features</a>
+            <a href="#" style="--i:3;">Contact</a>
+            <span>
+                <a href="#" style="--i:4;">Sign Up</a>
+            </span>
+        </nav>
     </header>
-    
+
     <section>
         <h1>Hi!</h1>
         <h3>Welcome to <span>Doggle!</span></h3>
@@ -55,28 +58,45 @@
         </a>
     </section>
 
-    <footer>
-        <div class="flex-container">
-            <div>
-                <h3>More</h3> <br>
-                <a href="#">About</a><br>
-                <a href="#">Features</a><br>
-                <a href="#">Contact</a>
-            </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
 
-            <div>
-                <h3>Stalk Us</h3> <br>
-                <a href="#">Facebook</a><br>
-                <a href="#">Instagram<br></a>
-                <a href="#">TikTok<br></a>
-            </div>
-            
-            <div>
-                <h3>Contact</h3> <br>
-                <a>contact@doggleapp.com</a> <br>
-                <a>+45 71 83 01 15</a> <br>
+                <div class="footer-col">
+                    <h4>Stalk Us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">TikTok</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">contact@doggleapp.com</a></li>
+                        <li><a href="#">+45 71 83 01 15</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
+
     </footer>
     <script src="js/script.js"></script>
 </body>

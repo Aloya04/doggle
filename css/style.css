@@ -41,34 +41,67 @@ html {
 body {
     background-color: var(--light);
     min-height: 100vh;
+    line-height: 1.5;
 }
 
 header {
     position: fixed;
-    background-color: var(--green);
     top: 0;
     left: 0;
     width: 100%;
+    padding: 30px 100px;
+    background-color: var(--green);
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: 0.6s;
-    padding: 30px 100px;
-    z-index: 1;
+    z-index: 100;
 }
 
 .logo {
-    position: relative;
     font-weight: var(--font-bold);
     color: var(--light);
     text-decoration: none;
     font-size: var(--big-font-size);
-    letter-spacing: 2px;
     transition: 0.3s;
 }
 
 .logo:hover {
     color: var(--yellow);
+}
+
+.navbar a {
+    font-size: var(--text-font-size);
+    color: var(--light);
+    text-decoration: none;
+    font-weight: var(--font-regular);
+    margin-left: 2.5rem;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--yellow);
+}
+
+.navbar span a {
+    color: var(--dark);
+    font-weight: var(--font-semi-bold);
+    background: var(--yellow);
+    padding: 10px 20px;
+    border: solid;
+    border-color: var(--yellow);
+    border-radius: 37px;
+}
+
+.navbar span a:hover {
+    color: var(--yellow);
+    background: none;
+    border: solid;
+}
+
+
+#check {
+    display: none;
 }
 
 .icons {
@@ -80,43 +113,16 @@ header {
     display: none;
 }
 
-header ul {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-}
-  
-header ul li {
-    position: relative;
-    list-style: none;
-}
-  
-header ul li a {
-    position: relative;
-    margin: 0 40px;
-    color: var(--light);
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-weight: var(--font-regular);
-    transition: 0.3s;
-}
-
-header ul li a:hover {
-    color: var(--yellow);
-}
-
+/*=============== BREAKPOINTS ===============*/
 @media (max-width: 992px) {
     header {
         padding: 1.3rem 5%;
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1020px) {
     .icons {
         display: inline-flex;
-        transition: 0.6s;
     }
 
     #check:checked~.icons #menu-icon {
@@ -131,7 +137,7 @@ header ul li a:hover {
         display: block;
     }
 
-    .nav__list {
+    .navbar {
         position: absolute;
         top: 100%;
         left: 0;
@@ -140,74 +146,96 @@ header ul li a:hover {
         background: var(--yellow);
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
         transition: 0.3s ease;
-        display: block;
         overflow: hidden;
-        text-align: center;
         font-size: var(--text-font-size);
     }
-
-    #check:checked~.nav__list {
-        height: 14rem;
+    
+    #check:checked~.navbar {
+        height: 21rem;
     }
 
-    .nav__list ul {
+    .navbar a {
         display: block;
-        transform: translateY(-50px);
-        opacity: 0;
-        transition: 0.3s ease;
-    }
-
-    .nav__list ul li {
-        text-align: center;
+        font-size: var(--text-font-size);
         color: var(--dark);
-    }
-
-    header ul li {
         margin: 1.5rem 0;
-    }
-
-    header ul li a {
-        color: var(--dark);
         text-align: center;
+        transform: translateY(-50px);
+        transition: .3s ease;
+    }
+    
+    .navbar span a:hover {
+        border-color: none;
+        color: var(--dark);
     }
 
-    #check:checked~.nav__list ul {
+    .navbar a:hover {
+        color: var(--dark);
+    }
+
+    #check:checked~.navbar a {
         transform: translateY(0);
-        opacity: 1;
-        transition-delay: calc(0.15s * var(--i));
+        transition-delay: calc(.15s * var(--i));
     }
 }
 
 /*=============== FOOTER ===============*/
-.flex-container {
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.flex-container > div {
+ul {
+    list-style: none;
+}
+
+.footer {
     background-color: var(--green);
-    width: 100%;
-    height: 300px;
-    text-align: center;
-    line-height: 30px;
-    padding-top: 60px;
+    padding: 70px 0;
 }
 
-.flex-container div h3 {
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
     font-size: var(--text-font-size);
-    font-weight: var(--font-semi-bold);
-    color: var(--light);
-    letter-spacing: 2px;
-}
-
-.flex-container div a {
-    text-decoration: none;
-    font-size: 20px;
     font-weight: var(--font-regular);
     color: var(--light);
-    letter-spacing: 2px;
+    margin-bottom: 35px;
+    position: relative;
 }
 
-.flex-container div a:hover {
-    padding-left: 10px;
+.footer-col ul li a {
+    font-size: 20px;
+    color: var(--light);
+    font-weight: var(--font-light);
+    text-decoration: none;
+    display: block;
+    transition: all .3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: var(--yellow)
+}
+
+/*=============== BREAKPOINTS ===============*/
+@media (max-width: 1030px) {
+    .footer-col {
+        width: 50%;
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 547px) {
+    .footer-col {
+        width: 100%;
+    }
 }

@@ -36,6 +36,7 @@
 
 html {
     scroll-behavior: smooth;
+    padding-top: 100px;
 }
 
 body {
@@ -45,7 +46,7 @@ body {
 }
 
 header {
-    position: fixed;
+    position: absolute; /* relative */
     top: 0;
     left: 0;
     width: 100%;
@@ -57,6 +58,18 @@ header {
     transition: 0.6s;
     z-index: 100;
 }
+
+/*
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.sticky + .main {
+    padding-top: 130px;
+}
+*/
 
 .logo {
     font-weight: var(--font-bold);
@@ -99,7 +112,6 @@ header {
     border: solid;
 }
 
-
 #check {
     display: none;
 }
@@ -113,7 +125,7 @@ header {
     display: none;
 }
 
-/*=============== BREAKPOINTS ===============*/
+/*=============== BREAKPOINTS HEADER ===============*/
 @media (max-width: 992px) {
     header {
         padding: 1.3rem 5%;
@@ -179,6 +191,73 @@ header {
     }
 }
 
+/*=============== MAIN ===============*/
+.main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    color: var(--dark);
+}
+
+.main__content h1 {
+    font-size: 6rem; /* 96px */
+    font-weight: var(--font-regular);
+}
+
+.main__content h2 {
+    font-size: 3rem; /* 48px */
+    font-weight: var(--font-regular);
+}
+
+.main__content h2 span {
+    font-weight: var(--font-bold);
+}
+
+.main__content h3 {
+    padding-top: 50px;
+    font-size: var(--heading-font-size);
+    font-weight: var(--font-regular);
+}
+
+.wrapper {
+    margin-top: 50px;
+    padding: 40px 40px;
+    border-radius: 20px;
+    background-color: var(--latte);
+}
+
+.wrapper button {
+    color: var(--light);
+    font-weight: var(--font-semi-bold);
+    background: var(--orange);
+    padding: 10px 20px;
+    border: solid;
+    border-color: var(--orange);
+    border-radius: 37px;
+    font-size: var(--text-font-size);
+    text-decoration: none;
+}
+
+.wrapper button:hover {
+    color: var(--orange);
+    background: none;
+    border: solid;
+    transition: .3s ease;
+}
+
+
+.main__content p {
+    font-size: var(--text-font-size);
+    font-weight: var(--font-regular);
+}
+
 /*=============== FOOTER ===============*/
 .container {
     max-width: 1170px;
@@ -199,12 +278,12 @@ ul {
     padding: 70px 0;
 }
 
-.footer-col {
+.footer__column {
     width: 25%;
     padding: 0 15px;
 }
 
-.footer-col h4 {
+.footer__column h4 {
     font-size: var(--text-font-size);
     font-weight: var(--font-regular);
     color: var(--light);
@@ -212,7 +291,7 @@ ul {
     position: relative;
 }
 
-.footer-col ul li a {
+.footer__column ul li a {
     font-size: 20px;
     color: var(--light);
     font-weight: var(--font-light);
@@ -221,13 +300,13 @@ ul {
     transition: all .3s ease;
 }
 
-.footer-col ul li a:hover {
+.footer__column ul li a:hover {
     color: var(--yellow)
 }
 
-/*=============== BREAKPOINTS ===============*/
+/*=============== BREAKPOINTS FOOTER ===============*/
 @media (max-width: 1030px) {
-    .footer-col {
+    .footer__column {
         width: 50%;
         padding: 0 15px;
         margin-bottom: 30px;
@@ -235,7 +314,7 @@ ul {
 }
 
 @media (max-width: 547px) {
-    .footer-col {
+    .footer__column {
         width: 100%;
     }
 }

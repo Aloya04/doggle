@@ -10,10 +10,11 @@
 </head>
 <body>
     
-    <header class="header">
+    <header class="sticky" id="myHeader">
         <a href="#" class="logo">Doggle</a>
 
         <input type="checkbox" id="check">
+
         <label for="check" class="icons">
             <i class='bx bx-menu' id="menu-icon"></i>
             <i class='bx bx-x' id="close-icon"></i>
@@ -30,21 +31,29 @@
         </nav>
     </header>
 
-    <section>
-        <h1>Hi!</h1>
-        <h3>Welcome to <span>Doggle!</span></h3>
-        <h4>Meet fellow dog owners, join local events, <br>
-            and turn every walk into a social experience.
-            </h4>
-        <div>
-            <p>Doggle transforms routine walks into exciting adventures, guiding you to the beautiful and dog-friendly spots in the city.</p>
-            <button>Read more</button>
-        </div>
+    <div class="main">
+        <div class="main__container">
+            <div class="main__content">
 
-        <aside>
-            <img src="images/mockup-dog.png" alt="Mobile App Mockup and Dog Behind It">
-        </aside>
-    </section>
+                <h1>Hi!</h1>
+                <h2>Welcome to <span>Doggle!</span></h2>
+                <h3>Meet fellow dog owners, join local events,
+                and turn every walk into a social experience.
+                </h3>
+
+                <div class="wrapper">
+                    <p>Doggle transforms routine walks into exciting adventures, guiding you to the beautiful and dog-friendly spots in the city.</p>
+                    <a href="#"><button>Read more</button></a>
+                </div>
+
+            </div>
+
+            <div class="image__container">
+                <img src="images/mockup-dog.png" alt="Mobile App Mockup and Dog Behind It" id="main__image">
+            </div>
+
+        </div>	    
+    </div>
 
     <section>
         <h2>Get Doggle App Now!</h2>
@@ -61,7 +70,7 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="footer-col">
+                <div class="footer__column">
                     <h4>More</h4>
                     <ul>
                         <li><a href="#">About</a></li>
@@ -70,7 +79,7 @@
                     </ul>
                 </div>
 
-                <div class="footer-col">
+                <div class="footer__column">
                     <h4>Stalk Us</h4>
                     <ul>
                         <li><a href="#">Facebook</a></li>
@@ -79,7 +88,7 @@
                     </ul>
                 </div>
 
-                <div class="footer-col">
+                <div class="footer__column">
                     <h4>Contact</h4>
                     <ul>
                         <li><a href="#">contact@doggleapp.com</a></li>
@@ -87,7 +96,7 @@
                     </ul>
                 </div>
 
-                <div class="footer-col">
+                <div class="footer__column">
                     <h4>Get help</h4>
                     <ul>
                         <li><a href="#">FAQ</a></li>

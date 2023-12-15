@@ -37,16 +37,18 @@
 html {
     scroll-behavior: smooth;
     padding-top: 100px;
+    min-width: 100%;
 }
 
 body {
     background-color: var(--light);
     min-height: 100vh;
     line-height: 1.5;
+    min-width: 100%;
 }
 
 header {
-    position: absolute; /* relative */
+    position: fixed; /* relative */
     top: 0;
     left: 0;
     width: 100%;
@@ -194,15 +196,15 @@ header {
 /*=============== MAIN ===============*/
 .main__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 500px;
     align-items: center;
     justify-self: center;
     margin: 0 auto;
     height: 90vh;
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
-    padding: 0 50px;
+    max-width: 1900px;
+    padding: 0 100px;
     color: var(--dark);
 }
 
@@ -231,6 +233,11 @@ header {
     padding: 40px 40px;
     border-radius: 20px;
     background-color: var(--latte);
+    width: 60%;
+}
+
+.forbutton {
+    text-align: right;
 }
 
 .wrapper button {
@@ -243,6 +250,7 @@ header {
     border-radius: 37px;
     font-size: var(--text-font-size);
     text-decoration: none;
+    margin-top: 50px;
 }
 
 .wrapper button:hover {
@@ -253,10 +261,161 @@ header {
 }
 
 
-.main__content p {
+.wrapper p {
     font-size: var(--text-font-size);
     font-weight: var(--font-regular);
 }
+
+.image__container {
+    text-align: center;
+}
+
+#main__img {
+    height: 80%;
+    width: 80%;
+}
+
+/*=============== BREAKPOINTS MAIN ===============*/
+@media (max-width: 1300px) {
+    .main__container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90vh;
+        padding: 0 50px;
+    }
+
+    .main__content {
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    .main__content h1 {
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+
+    .main__content h3 {
+        margin-right: 50px;
+    }
+    
+    .wrapper {
+        width: 80%;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    .forbutton {
+        text-align: center;
+    }
+
+    .image__container {
+        margin-top: 50px;
+    }
+
+    @media (max-width: 480px) {
+        .main__content h1 {
+            margin-right: 30px;
+        }
+
+        .main__content h2 {
+            font-size: 2rem;
+            margin-top: 0;
+            margin-right: 30px;
+        }
+
+        .main__content h3 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-right: 50px;
+        }
+
+        .wrapper {
+            margin-right: 80px;
+        }
+    }
+}
+   
+/*=============== SECTION ===============*/
+.section__container {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    z-index: 1;
+    width: 100%;
+    max-width: 1900px;
+    padding: 0 100px;
+}
+
+section h2 {
+    font-size: 64px;
+    font-weight: var(--font-semi-bold);
+    color: var(--dark);
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+.section__content {
+    display: flex;
+    justify-content: center;
+}
+
+.section__buttons {
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+}
+
+.section__buttons img {
+    margin-bottom: 10px;
+}
+
+#logo__icon {
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+/*=============== BREAKPOINTS SECTION ===============*/
+@media (max-width: 1300px) {
+    .section__container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+
+    section h2 {
+        margin-top: 700px;
+    }
+
+    #mockup {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    section h2 {
+        font-size: var(--heading-font-size);
+        margin-top: 700px;
+    }
+
+    #mockup {
+        margin-top: 100px;
+        height: 300px;
+    }
+}
+
+
 
 /*=============== FOOTER ===============*/
 .container {

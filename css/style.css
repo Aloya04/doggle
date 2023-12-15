@@ -28,37 +28,37 @@
 
 /*=============== BASE ===============*/
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin: 0; /* Set margin to 0 */
+    padding: 0; /* Set padding to 0 */
     font-family: var(--body-font);
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
     padding-top: 100px;
-    min-width: 100%;
+    min-width: 100%; /* Set the minimum width of the body to 100% */
 }
 
 body {
     background-color: var(--light);
-    min-height: 100vh;
-    line-height: 1.5;
+    min-height: 100vh; /* Set the minimum height of the body to 100 viewport height */
+    line-height: 1.5; /* Set the line height for text */
     min-width: 100%;
 }
 
 header {
-    position: fixed; /* relative */
+    position: fixed; /* Fixed position at the top */
     top: 0;
     left: 0;
     width: 100%;
     padding: 30px 100px;
     background-color: var(--green);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.6s;
-    z-index: 100;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space elements evenly */
+    align-items: center; /* Align items vertically at the center */
+    transition: 0.6s; /* Add a transition effect */
+    z-index: 100; /* Stack above other elements */
 }
 
 /*
@@ -76,13 +76,13 @@ header {
 .logo {
     font-weight: var(--font-bold);
     color: var(--light);
-    text-decoration: none;
+    text-decoration: none; /* Remove underline from links */
     font-size: var(--big-font-size);
-    transition: 0.3s;
+    transition: 0.3s; /* Add a transition effect */
 }
 
 .logo:hover {
-    color: var(--yellow);
+    color: var(--yellow); /* Change text color on hover to the defined yellow color */
 }
 
 .navbar a {
@@ -103,9 +103,9 @@ header {
     font-weight: var(--font-semi-bold);
     background: var(--yellow);
     padding: 10px 20px;
-    border: solid;
+    border: solid; /* Add a solid border */
     border-color: var(--yellow);
-    border-radius: 37px;
+    border-radius: 37px; /* Add border-radius for rounded corners */
 }
 
 .navbar span a:hover {
@@ -115,19 +115,19 @@ header {
 }
 
 #check {
-    display: none;
+    display: none; /* Hide the checkbox */
 }
 
 .icons {
-    position: absolute;
-    right: 5%;
+    position: absolute; /* Absolute positioning */
+    right: 5%; /* Distance from the right */
     font-size: 2.8rem;
     color: var(--light);
-    cursor: pointer;
-    display: none;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    display: none; /* Hide the icons by default */
 }
 
-/*=============== BREAKPOINTS HEADER ===============*/
+/*=============== BREAKPOINTS HEADER ===============*/ /* For smaller screen sizes*/
 @media (max-width: 992px) {
     header {
         padding: 1.3rem 5%;
@@ -136,19 +136,19 @@ header {
 
 @media (max-width: 1020px) {
     .icons {
-        display: inline-flex;
+        display: inline-flex; /* Display icons as inline-flex at smaller screen sizes */
     }
 
     #check:checked~.icons #menu-icon {
-        display: none;
+        display: none; /* Hide the menu icon when the checkbox is checked */
     }
 
     .icons #close-icon {
-        display: none;
+        display: none; /* Hide the close icon by default */
     }
 
     #check:checked~.icons #close-icon {
-        display: block;
+        display: block; /* Display the close icon when the checkbox is checked */
     }
 
     .navbar {
@@ -158,9 +158,9 @@ header {
         width: 100%;
         height: 0;
         background: var(--yellow);
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-        transition: 0.3s ease;
-        overflow: hidden;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); /* Adds a subtle shadow below the element */
+        transition: 0.3s ease; /* Smooth transition effect over 0.3 seconds with ease-in-out timing function */
+        overflow: hidden; /* Hides content that exceeds the box dimensions, preventing scrollbars */
         font-size: var(--text-font-size);
     }
     
@@ -173,8 +173,8 @@ header {
         font-size: var(--text-font-size);
         color: var(--dark);
         margin: 1.5rem 0;
-        text-align: center;
-        transform: translateY(-50px);
+        text-align: center; /* Aligns the text to the center of its container */
+        transform: translateY(-50px); /* Moves the element vertically up by 50 pixels */
         transition: .3s ease;
     }
     
@@ -187,16 +187,17 @@ header {
         color: var(--dark);
     }
 
+    /* When the checkbox with the ID 'check' is checked, apply the following styles to the links inside the navbar */
     #check:checked~.navbar a {
-        transform: translateY(0);
-        transition-delay: calc(.15s * var(--i));
+        transform: translateY(0); /* Resets the vertical translation, bringing the element back to its original position */
+        transition-delay: calc(.15s * var(--i)); /* Delays the transition effect, creating a staggered animation based on a custom variable --i */
     }
 }
 
 /*=============== MAIN ===============*/
 .main__container {
-    display: grid;
-    grid-template-columns: 1fr 500px;
+    display: grid; /* Enables grid layout for the container */
+    grid-template-columns: 1fr 500px; /* Defines two columns in the grid layout, the first taking 1 fraction of the available space and the second having a fixed width of 500 pixels */
     align-items: center;
     justify-self: center;
     margin: 0 auto;
@@ -345,7 +346,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-self: center;
+    justify-self: center; /* Aligns the container's contents along the horizontal axis (in a grid) to the center */
     margin: 0 auto;
     z-index: 1;
     width: 100%;
@@ -424,12 +425,12 @@ section h2 {
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; /* Enables a flex container to align child elements */
+    flex-wrap: wrap; /* Allows flex items to wrap onto multiple lines when there's insufficient space */
 }
 
 ul {
-    list-style: none;
+    list-style: none; /* Removes the default styling (bullets or numbers) of an unordered or ordered list */
 }
 
 .footer {
@@ -447,7 +448,7 @@ ul {
     font-weight: var(--font-regular);
     color: var(--light);
     margin-bottom: 35px;
-    position: relative;
+    position: relative; /* The element is positioned relative to its normal position in the document flow */
 }
 
 .footer__column ul li a {

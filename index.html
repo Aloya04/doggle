@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title and Styling -->
     <title>Doggle</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" href="images/logo.png" type="image/x-icon"> <!-- adds favicon -->
+    <link rel="stylesheet" href="/css/style.css"> <!-- External CSS Stylesheet -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- External Boxicons library -->
+    <link rel="icon" href="images/logo.png" type="image/x-icon"> <!-- Adds a Favicon -->
 </head>
 <body>
     
+    <!-- Header Section -->
     <header class="sticky" id="myHeader">
         <a href="#" class="logo">Doggle</a>
 
+        <!-- Checkbox for Responsive Navigation -->
         <input type="checkbox" id="check">
 
+        <!-- Navigation Icons -->
         <label for="check" class="icons">
-            <i class='bx bx-menu' id="menu-icon"></i>
-            <i class='bx bx-x' id="close-icon"></i>
+            <i class='bx bx-menu' id="menu-icon"></i> <!-- Hamburger menu icon -->
+            <i class='bx bx-x' id="close-icon"></i> <!-- Close menu icon -->
         </label>
         
+        <!-- Navigation Links -->
         <nav class="navbar">
+            <!-- Example navigation links with custom styling for animation delay -->
             <a href="#" style="--i:0;">Home</a>
             <a href="#" style="--i:1;">About</a>
             <a href="#" style="--i:2;">Features</a>
@@ -31,16 +39,19 @@
         </nav>
     </header>
 
+    <!-- Main Section -->
     <div class="main">
         <div class="main__container">
             <div class="main__content">
 
+                <!-- Headings and Text Content -->
                 <h1>Hi!</h1>
                 <h2>Welcome to <span>Doggle!</span></h2>
                 <h3>Meet fellow dog owners, join local events,
                 and turn every walk into a social experience.
                 </h3>
 
+                <!-- Wrapper for Text Content and Button -->
                 <div class="wrapper">
                     <p>Doggle transforms routine walks into exciting adventures, guiding you to the beautiful and dog-friendly spots in the city.</p>
                     <div class="forbutton">
@@ -50,6 +61,7 @@
 
             </div>
 
+            <!-- Image Container -->
             <div class="image__container">
                 <img src="images/mockup-dog.png" alt="Mobile App Mockup and Dog Behind It" id="main__image">
             </div>
@@ -57,15 +69,18 @@
         </div>	    
     </div>
 
+    <!-- Section -->
     <section>
         <h2>Get Doggle App Now!</h2>
         <div class="section__container">
             <div class="section__content">
 
+                <!-- Mockup Image -->
                 <img src="images/mockup.png" alt="Mobile App Mockup" id="mockup">
 
             </div>
 
+            <!-- Buttons for App Download -->
             <div class="section__buttons">
                 <img src="/images/logo.png" alt="Logo" height="150px" width="150" id="logo__icon">
                 <a href="">
@@ -79,9 +94,11 @@
         </div>
     </section>
 
+    <!-- Footer Section -->
     <footer class="footer">
         <div class="container">
             <div class="row">
+                <!-- Footer Columns -->
                 <div class="footer__column">
                     <h4>More</h4>
                     <ul>
@@ -119,6 +136,6 @@
         </div>
 
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/script.js"></script> <!-- External JavaScript Script -->
 </body>
 </html>

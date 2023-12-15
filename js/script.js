@@ -1,4 +1,4 @@
-// This JavaScript code changes the document title to display a custom message ("Milo Misses You!" 
+// This JavaScript code changes the document title to display a custom message ("Milo Misses You!") 
 //when the user switches tabs or loses focus, 
 //and restores the original title when the user returns to the tab.
 

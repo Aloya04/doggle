@@ -113,6 +113,13 @@ main {
     background-size: cover;
 }
 
+.photo2 {
+    height: 250px;
+    background-image: url(/images/park-jordana.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
 .main__label {
     display: flex;
     justify-content: space-between;
@@ -216,9 +223,28 @@ main {
 	display: inline-block; /* Display list items as inline-block for horizontal layout */
 	border-radius: 5px;
 	font-size: 0; /* Set font size to 0 to remove any unwanted space between items */
-    background-image: url(/images/user-photo1.jpg);
     background-position: center;
     background-size: cover;
+}
+
+#photo1 {
+    background-image: url(/images/user-photo1.jpg);
+}
+
+#photo2 {
+    background-image: url(/images/user-photo2.jpg);
+}
+
+#photo3 {
+    background-image: url(/images/park-jordana.jpg);
+}
+
+#photo4 {
+    background-image: url(/images/user-photo4.jpg);
+}
+
+#photo5 {
+    background-image: url(/images/zakrzowek.png);
 }
 
 /*=============== BREAKPOINTS CAROUSEL SECTION ===============*/

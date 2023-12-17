@@ -170,6 +170,22 @@ main {
     border: solid;
 }
 
+/* ----- MAP ----- */
+#map {
+    display: grid;
+    margin: auto;
+    width: 400px;
+    height: 300px;
+}
+
+@media (min-width: 992px) {
+    #map {
+        width: 900px;
+        height: 300px;
+    }
+}
+
+
 /* ----- ARTICLE ----- */
 .main__info {
     margin: 20px;

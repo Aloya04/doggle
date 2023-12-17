@@ -57,3 +57,30 @@ slider.addEventListener('mousemove', (e) => {
   const walk = (x - startX) * SCROLL_SPEED; // Calculate the distance to scroll
   slider.scrollLeft = scrollLeft - walk; // Apply the scroll movement
 });
+
+// ======= MAPBOX ========
+var map = new mapboxgl.Map({
+  container: 'map', // HTML container id
+  style: 'mapbox://styles/mapbox/streets-v9', // style URL
+  center: [19.909904815642708, 50.0596891351949], // starting position as [lng, lat]
+  zoom: 14
+});
+
+var marker = new mapboxgl.Marker()
+.setLngLat([19.909904815642708, 50.0596891351949])
+.addTo(map);
+
+var map = new mapboxgl.Map({
+  container: 'map', // HTML container id
+  style: 'mapbox://styles/mapbox/streets-v9', // style URL
+  center: [19.909904815642708, 50.0596891351949], // starting position as [lng, lat]
+  zoom: 13
+});
+
+var popup = new mapboxgl.Popup()
+.setHTML('<h3>Blonia</h3><p>Huge meadow in the middle of the city</p>');
+
+var marker = new mapboxgl.Marker()
+.setLngLat([19.909904815642708, 50.0596891351949])
+.setPopup(popup)
+.addTo(map);

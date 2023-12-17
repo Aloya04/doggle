@@ -7,7 +7,7 @@
     <title>Blonia</title>
     <link rel="icon" href="images/logo.png" type="image/x-icon"> <!-- Adds a Favicon -->
     <link rel="stylesheet" href="/css/places.css"> <!-- External CSS Stylesheet -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/> <!-- FontAwesome icons -->
     <!-- Mapbox -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
@@ -40,14 +40,12 @@
                 It's a canvas of playfulness, where dogs chase dreams and families picnic with joy.</p>
         </article>
 
-        <!--  -->
+        <!-- Buttons -->
         <section class="main__buttons">
-            <a href="#">
-                <button>
-                    Chatroom
-                    <i class="fa-solid fa-location-dot"></i>
-                </button>
-            </a>
+            <button id="openModal">
+                Chatroom
+                <i class="fa-solid fa-location-dot"></i>
+            </button>
 
             <a href="#">
                 <button>
@@ -56,6 +54,16 @@
                 </button>
             </a>
         </section>
+
+        <!-- Pop-up -->
+        <div class="modal" id="modal">
+            <div class="modal-inner">
+                <h3>New badge unlocked!</h3>
+                <img src="images/early-bird.png" alt="Early Bird Badge">
+                <h2>Early Bird</h2>
+                <button id="closeModal">Close</button>
+            </div>
+        </div>
 
         <!-- Map -->
         <div id='map'></div>

@@ -62,25 +62,34 @@ slider.addEventListener('mousemove', (e) => {
 var map = new mapboxgl.Map({
   container: 'map', // HTML container id
   style: 'mapbox://styles/mapbox/streets-v9', // style URL
-  center: [19.909904815642708, 50.0596891351949], // starting position as [lng, lat]
+  center: [19.909904815642708, 50.0596891351949], // starting position as [lng, lat] Blonia coordinates
   zoom: 14
 });
 
-var marker = new mapboxgl.Marker()
-.setLngLat([19.909904815642708, 50.0596891351949])
-.addTo(map);
-
-var map = new mapboxgl.Map({
-  container: 'map', // HTML container id
-  style: 'mapbox://styles/mapbox/streets-v9', // style URL
-  center: [19.909904815642708, 50.0596891351949], // starting position as [lng, lat]
-  zoom: 13
-});
-
+// Pop-up that displays after clicking the marker
 var popup = new mapboxgl.Popup()
 .setHTML('<h3>Blonia</h3><p>Huge meadow in the middle of the city</p>');
 
-var marker = new mapboxgl.Marker()
+// Marker
+var marker = new mapboxgl.Marker() 
 .setLngLat([19.909904815642708, 50.0596891351949])
 .setPopup(popup)
 .addTo(map);
+
+// ======= POP UP ========
+// This JS code listens for clicks on a button and, when clicked, 
+// adds the 'open' class to the pop-up, making it visible. 
+// Clicking a "Close" button removes the 'open' class, hiding the pop-up. 
+// The visibility of the pop-up is controlled by toggling the presence of the 'open' class on the modal element.
+
+const openBtn = document.getElementById('openModal');
+const closeBtn = document.getElementById('closeModal');
+const modal = document.getElementById('modal');
+
+openBtn.addEventListener('click', () => {
+  modal.classList.add('open');
+})
+
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('open');
+})

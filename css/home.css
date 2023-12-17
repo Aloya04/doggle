@@ -181,11 +181,11 @@ header {
 }
 
 .blonia {
-    background-image: url(/images/blonia.jpg);
+    background-image: url(/images/blonia.webp);
 }
 
 .park__jordana {
-    background-image: url(/images/park-jordana.jpg);
+    background-image: url(/images/park-jordana.webp);
 }
 
 .park__jordana h2 {
@@ -193,7 +193,7 @@ header {
 }
 
 .zakrzowek {
-    background-image: url(/images/zakrzowek.png);
+    background-image: url(/images/zakrzowek.webp);
 }
 
 /*=============== BREAKPOINTS PLACES SECTION ===============*/
